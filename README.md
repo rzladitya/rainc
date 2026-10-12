@@ -27,7 +27,7 @@ npm run dev -- --port 8085
 
 The company facts come from the founder's instructions. Update entries describe actual corporate website milestones. The product demo is an illustrated sample, not a live Precidoc session. No product API route, customer count, legal registration, funding round or programme approval is asserted.
 
-Precidoc links point to `https://precidoc.rainc.web.id/`. Business contact links use `founder@rainc.web.id`. Company policies cover the corporate website, not undocumented Precidoc account or document processing behavior.
+Precidoc links point to `https://precidoc.rainc.web.id/`. Business contact links use `founder@rainc.tech`. Company policies cover the corporate website, not undocumented Precidoc account or document processing behavior.
 
 ## Validation
 
@@ -50,7 +50,7 @@ Set `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` securely, then:
 npm run deploy
 ```
 
-`wrangler.jsonc` configures the `rainc` Worker, its assets and the `rainc.web.id` custom domain. Only `/events` runs through the metrics Worker before asset handling. All public company pages remain static.
+`wrangler.jsonc` configures the `rainc` Worker, its assets and the `rainc.tech` primary custom domain and `rainc.web.id` redirect. All requests pass through the Worker so the old domain can redirect; `/events` handles metrics. All public company pages remain static.
 
 `cloudflare-pages.zip` contains static assets only. It does not contain the metrics Worker, so it is not a complete V2 deployment on its own.
 
@@ -73,7 +73,7 @@ owner's Search Console property.
 Repository About settings to apply when GitHub API access is available:
 
 * Description: RAinc corporate website. An independent AI Product Studio founded by Rizal Aditya, developing Precidoc.
-* Website: https://rainc.web.id/
+* Website: https://rainc.tech/
 * Topics: ai, saas, document-processing, product-studio, cloudflare-workers
 
 The October 12 follow up retains the V2 design and makes Precidoc's current

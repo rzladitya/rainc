@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import worker from "../worker.mjs";
-const origin = "https://rainc.web.id";
+const origin = "https://rainc.tech";
 const entries = [];
 const originalLog = console.log;
 console.log = (value) => entries.push(JSON.parse(value));
@@ -16,6 +16,9 @@ const metric = {
   source: "products",
 };
 try {
+  const redirect = await worker.fetch(new Request("https://rainc.web.id/products/?from=old"), {});
+  assert.equal(redirect.status, 308);
+  assert.equal(redirect.headers.get("Location"), "https://rainc.tech/products/?from=old");
   assert.equal((await worker.fetch(post(metric), {})).status, 204);
   assert.deepEqual(entries[0], {
     type: "rainc_site_metric",

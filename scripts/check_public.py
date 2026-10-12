@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 
-BASE = 'https://rainc.web.id'
+BASE = 'https://rainc.tech'
 PATHS = ['/', '/products/', '/about/', '/updates/', '/contact/', '/privacy/', '/terms/']
 
 

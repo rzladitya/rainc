@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /events
-Sitemap: https://rainc.web.id/sitemap.xml
+Sitemap: https://rainc.tech/sitemap.xml

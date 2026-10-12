@@ -9,13 +9,15 @@
   "assets": {
     "directory": "public",
     "binding": "ASSETS",
-    "run_worker_first": [
-      "/events"
-    ],
+    "run_worker_first": true,
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
   },
   "routes": [
+    {
+      "pattern": "rainc.tech",
+      "custom_domain": true
+    },
     {
       "pattern": "rainc.web.id",
       "custom_domain": true

@@ -54,7 +54,7 @@ const fs = require("fs");
         !info.fonts ||
         !info.description ||
         info.robots !== "index, follow" ||
-        info.canonical !== "https://rainc.web.id" + path
+        info.canonical !== "https://rainc.tech" + path
       )
         throw Error(path + " " + JSON.stringify(info));
       results.push({
