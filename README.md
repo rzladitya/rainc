@@ -61,3 +61,21 @@ In the Cloudflare dashboard, open the `rainc` Worker and its Logs or Observabili
 Tracked events are `page_view`, `product_open`, `demo_open`, `demo_step`, `example_download`, `contact_email` and `founder_profile`. These represent page views or user actions, not unique people, delivered emails, subscriptions or sales. The tracker uses no cookies, browser IDs, query strings, document content or email contents. Do Not Track and Global Privacy Control suppress tracking.
 
 Metrics use the existing Cloudflare Worker logging service. No additional paid analytics subscription or third party browser SDK is required. Provider plan quotas and log retention settings still apply. Privacy disclosures describe the distinction between event payloads and Cloudflare's technical request records.
+
+### Follow up verification
+
+Run `python3 scripts/check_public.py` after deployment to check the seven public
+HTTPS pages, canonical URLs, indexing directives, sitemap and Precidoc sample
+entry. This does not establish search engine indexing or test the Precidoc
+workspace itself. Google Search Console submission requires access to the site
+owner's Search Console property.
+
+Repository About settings to apply when GitHub API access is available:
+
+* Description: RAinc corporate website. An independent AI Product Studio founded by Rizal Aditya, developing Precidoc.
+* Website: https://rainc.web.id/
+* Topics: ai, saas, document-processing, product-studio, cloudflare-workers
+
+The October 12 follow up retains the V2 design and makes Precidoc's current
+capabilities and unavailable features explicit. Its public sample entry links
+straight to the product; the corporate example remains a separate illustration.

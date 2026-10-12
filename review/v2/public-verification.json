@@ -1,0 +1,43 @@
+{
+  "checked_on": "2026-10-12",
+  "pages": [
+    {
+      "url": "https://rainc.web.id/",
+      "canonical": "https://rainc.web.id/",
+      "robots": "index, follow"
+    },
+    {
+      "url": "https://rainc.web.id/products/",
+      "canonical": "https://rainc.web.id/products/",
+      "robots": "index, follow"
+    },
+    {
+      "url": "https://rainc.web.id/about/",
+      "canonical": "https://rainc.web.id/about/",
+      "robots": "index, follow"
+    },
+    {
+      "url": "https://rainc.web.id/updates/",
+      "canonical": "https://rainc.web.id/updates/",
+      "robots": "index, follow"
+    },
+    {
+      "url": "https://rainc.web.id/contact/",
+      "canonical": "https://rainc.web.id/contact/",
+      "robots": "index, follow"
+    },
+    {
+      "url": "https://rainc.web.id/privacy/",
+      "canonical": "https://rainc.web.id/privacy/",
+      "robots": "index, follow"
+    },
+    {
+      "url": "https://rainc.web.id/terms/",
+      "canonical": "https://rainc.web.id/terms/",
+      "robots": "index, follow"
+    }
+  ],
+  "sitemap": "valid seven canonical URLs",
+  "robots": "allows public indexing",
+  "precidoc_sample": "HTTP 200"
+}
