@@ -1,20 +1,24 @@
-# Primary domain migration on 12 October 2026
+# Domain consolidation on 12 October 2026
 
-Primary corporate domain: https://rainc.tech/
-Business contact displayed by the website: founder@rainc.tech
-Precidoc remains at https://precidoc.rainc.web.id/.
+RAinc uses https://rainc.tech/ with founder@rainc.tech as its contact.
+Precidoc now has the custom domain precidoc.rainc.tech on its existing Worker.
+Corporate product links, including the sample entry, use the new product domain.
 
-Cloudflare deployment succeeded and the Workers Domains API confirms both
-rainc.tech and rainc.web.id are attached to the rainc Worker. The old domain
-returns HTTP 308, preserving the path and query string, to rainc.tech.
-All generated canonical, Open Graph, organization, sitemap and corporate policy
-URLs now use rainc.tech. The old domain remains bound to serve redirects.
+Live HTTPS checks confirm all seven corporate pages, indexing directives,
+canonical URLs, robots and sitemap. See public-verification.json.
+The old corporate domain returns HTTP 301 to the equivalent rainc.tech URL.
+The old Precidoc sample returned HTTP 308 to precidoc.rainc.tech/sample,
+preserving the tab query parameter. This redirect is served by the product
+configuration, not the corporate Worker.
 
-The environment proxy currently denies direct HTTPS requests to rainc.tech.
-An allowlist draft adding only rainc.tech was saved for user review and Publish.
-Public destination availability cannot be claimed from that blocked request.
-The earlier public-verification.json records the previous domain verification.
-Run scripts/check_public.py again once network access is applied.
+www.rainc.tech is bound to the corporate Worker and redirects to rainc.tech.
+Unit tests verify both corporate redirects preserve paths and query strings.
+The environment proxy blocks direct requests to www.rainc.tech and
+precidoc.rainc.tech. Their allowlist additions were saved as a draft requiring
+Save and Publish. Product processing, authentication, product canonical URLs
+and the new sample destination have not been verified in this environment.
 
-Updating website contact links does not create a mailbox or configure email
-routing. Delivery to founder@rainc.tech has not been verified or configured.
+The founder confirmed sending and receiving at founder@rainc.tech. No email
+was sent by this agent. SPF, DKIM and DMARC have not been independently audited;
+the email provider has not been specified. Search Console and external profile
+updates are also pending configured access.

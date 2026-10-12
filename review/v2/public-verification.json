@@ -2,38 +2,38 @@
   "checked_on": "2026-10-12",
   "pages": [
     {
-      "url": "https://rainc.web.id/",
-      "canonical": "https://rainc.web.id/",
+      "url": "https://rainc.tech/",
+      "canonical": "https://rainc.tech/",
       "robots": "index, follow"
     },
     {
-      "url": "https://rainc.web.id/products/",
-      "canonical": "https://rainc.web.id/products/",
+      "url": "https://rainc.tech/products/",
+      "canonical": "https://rainc.tech/products/",
       "robots": "index, follow"
     },
     {
-      "url": "https://rainc.web.id/about/",
-      "canonical": "https://rainc.web.id/about/",
+      "url": "https://rainc.tech/about/",
+      "canonical": "https://rainc.tech/about/",
       "robots": "index, follow"
     },
     {
-      "url": "https://rainc.web.id/updates/",
-      "canonical": "https://rainc.web.id/updates/",
+      "url": "https://rainc.tech/updates/",
+      "canonical": "https://rainc.tech/updates/",
       "robots": "index, follow"
     },
     {
-      "url": "https://rainc.web.id/contact/",
-      "canonical": "https://rainc.web.id/contact/",
+      "url": "https://rainc.tech/contact/",
+      "canonical": "https://rainc.tech/contact/",
       "robots": "index, follow"
     },
     {
-      "url": "https://rainc.web.id/privacy/",
-      "canonical": "https://rainc.web.id/privacy/",
+      "url": "https://rainc.tech/privacy/",
+      "canonical": "https://rainc.tech/privacy/",
       "robots": "index, follow"
     },
     {
-      "url": "https://rainc.web.id/terms/",
-      "canonical": "https://rainc.web.id/terms/",
+      "url": "https://rainc.tech/terms/",
+      "canonical": "https://rainc.tech/terms/",
       "robots": "index, follow"
     }
   ],

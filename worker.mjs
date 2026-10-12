@@ -44,10 +44,10 @@ const reply = (status) =>
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.hostname === "rainc.web.id") {
+    if (["rainc.web.id", "www.rainc.tech"].includes(url.hostname)) {
       url.hostname = "rainc.tech";
       url.protocol = "https:";
-      return Response.redirect(url.href, 308);
+      return Response.redirect(url.href, 301);
     }
     if (url.pathname !== "/events") return env.ASSETS.fetch(request);
     if (request.method !== "POST") return reply(405);

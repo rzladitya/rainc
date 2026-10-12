@@ -21,6 +21,10 @@
     {
       "pattern": "rainc.web.id",
       "custom_domain": true
+    },
+    {
+      "pattern": "www.rainc.tech",
+      "custom_domain": true
     }
   ],
   "workers_dev": true,

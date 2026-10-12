@@ -17,7 +17,10 @@ const metric = {
 };
 try {
   const redirect = await worker.fetch(new Request("https://rainc.web.id/products/?from=old"), {});
-  assert.equal(redirect.status, 308);
+  assert.equal(redirect.status, 301);
+  const www = await worker.fetch(new Request("https://www.rainc.tech/about/?from=www"), {});
+  assert.equal(www.status, 301);
+  assert.equal(www.headers.get("Location"), "https://rainc.tech/about/?from=www");
   assert.equal(redirect.headers.get("Location"), "https://rainc.tech/products/?from=old");
   assert.equal((await worker.fetch(post(metric), {})).status, 204);
   assert.deepEqual(entries[0], {

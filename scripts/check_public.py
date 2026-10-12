@@ -38,6 +38,6 @@ for path in PATHS:
     assert page.canonical == BASE + path, path
     assert page.robots == 'index, follow', path
     results.append({'url': BASE + path, 'canonical': page.canonical, 'robots': page.robots})
-fetch('https://precidoc.rainc.web.id/sample')
+fetch('https://precidoc.rainc.tech/sample')
 Path('review/v2/public-verification.json').write_text(json.dumps({'checked_on': '2026-10-12', 'pages': results, 'sitemap': 'valid seven canonical URLs', 'robots': 'allows public indexing', 'precidoc_sample': 'HTTP 200'}, indent=2) + '\n')
 print('Public HTTPS verification passed: seven pages, canonical URLs, robots, sitemap and Precidoc sample entry.')

@@ -27,7 +27,7 @@ npm run dev -- --port 8085
 
 The company facts come from the founder's instructions. Update entries describe actual corporate website milestones. The product demo is an illustrated sample, not a live Precidoc session. No product API route, customer count, legal registration, funding round or programme approval is asserted.
 
-Precidoc links point to `https://precidoc.rainc.web.id/`. Business contact links use `founder@rainc.tech`. Company policies cover the corporate website, not undocumented Precidoc account or document processing behavior.
+Precidoc links point to `https://precidoc.rainc.tech/`. Business contact links use `founder@rainc.tech`. Company policies cover the corporate website, not undocumented Precidoc account or document processing behavior.
 
 ## Validation
 
