@@ -1,0 +1,5 @@
+{
+  "verified": true,
+  "sql": "SELECT COUNT(*) AS metrics_records FROM logs WHERE message LIKE '%rainc_site_metric%'",
+  "testRecords": 89
+}

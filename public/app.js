@@ -110,7 +110,7 @@
     );
     document
       .querySelectorAll(
-        ".section-intro, .product-feature, .formats-row, .studio-copy, .studio-story, .founder-identity, .founder-story, .closing-section, .footer-top",
+        ".page-intro, .section-intro, .product-feature, .formats-row, .studio-copy, .studio-story, .founder-identity, .founder-story, .closing-section, .footer-top, .home-product, .updates-list article",
       )
       .forEach((element) => reveal.observe(element));
     const documentMotion = new IntersectionObserver(
@@ -174,7 +174,7 @@
       .querySelectorAll(".hero-art")
       .forEach((element) => documentMotion.observe(element));
   }
-  document.querySelector(".download-example").addEventListener("click", () => {
+  document.querySelector(".download-example")?.addEventListener("click", () => {
     const example = {
       document: "recovery-guide.md",
       example: true,

@@ -1,37 +1,63 @@
-# RAinc
+# RAinc corporate website
 
-Static website for RAinc, Rizal Aditya's independent AI product studio and the maker of Precidoc.
+The corporate website for RAinc, an independent AI Product Studio founded in early 2026 by Rizal Aditya. The studio is based in Indonesia and bootstrapped. Precidoc is its first SaaS product.
 
-## Develop
+The existing minimalist design is shared across seven public pages: Home, Products, About, Updates, Contact, Privacy Policy and Terms. All pages are static HTML. A small Cloudflare Worker handles limited first party website metrics.
 
-```sh
-python3 -m http.server 8081 --directory public
-```
+## Development
 
-No dependency installation or build is needed to serve the site. Fonts are bundled in `public/fonts` with their licenses. The site makes no third-party font or script requests.
-
-## Content and interactions
-
-- `public/index.html`: copy, navigation, product links, founder profile.
-- `public/styles.css`: responsive design and locally hosted fonts.
-- `public/app.js`: accessible tabs, mobile navigation, an example JSON download and motion that respects reduced motion preferences.
-
-The product illustration and interactive example explain the workflow; they are not screenshots or a live Precidoc session. The sample download contains three example chunks and is identified as example data. Product buttons open `https://precidoc.rainc.web.id/`. No workspace route, API endpoint, customer count or paid plan is assumed. The founder profile uses plain text, without a placeholder photograph or avatar.
-
-## Deploy to Cloudflare
-
-This project is deployed as a static-assets Cloudflare Worker named `rainc`. The configuration is in `wrangler.jsonc`. Custom domain: `rainc.web.id`. The existing Precidoc service is separate.
-
-Provide `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` through your environment. Keep credentials outside `public` and out of version control. `.env` is ignored by Git and is not automatically loaded by the static website.
-
-Use Wrangler 4.149.0 or later from the repository directory:
+Requirements: Node.js 22 or later, Python 3, and npm.
 
 ```sh
-wrangler deploy
+npm ci
+npm run generate
+npm run dev -- --port 8085
 ```
 
-For Cloudflare Pages Direct Upload, `cloudflare-pages.zip` contains only the files from `public` and can be regenerated without any credentials. For a separate Pages project connected to Git, choose no framework or build command, with `public` as the output directory.
+`npm run dev` disables loading deployment credentials from `.env` into the local Worker. Keep Cloudflare deployment authentication in the process environment or secure environment settings. Never add it to `public`, `worker.mjs` or `wrangler.jsonc`.
 
-## Design review
+## Content and files
 
-See `review/design-review.md` for the findings and validation. Screenshots and the motion recording in `review` are local browser renders of the deployable source. They are not served with the public site.
+- `scripts/generate_site.py`: company information, page content, shared navigation, metadata, structured data, sitemap and robots generation.
+- `site/partials`: the original document illustration and interactive workflow component.
+- `public/styles.css` and `public/app.js`: the existing visual system, accessible menu and demo tabs, JSON example download and reduced motion support.
+- `public/analytics.js`: privacy signal aware event tracker.
+- `worker.mjs`: bounded, allowlisted metrics endpoint and asset forwarding.
+- `public/fonts`: locally hosted fonts and their licenses.
+
+The company facts come from the founder's instructions. Update entries describe actual corporate website milestones. The product demo is an illustrated sample, not a live Precidoc session. No product API route, customer count, legal registration, funding round or programme approval is asserted.
+
+Precidoc links point to `https://precidoc.rainc.web.id/`. Business contact links use `founder@rainc.web.id`. Company policies cover the corporate website, not undocumented Precidoc account or document processing behavior.
+
+## Validation
+
+Start the local Worker on port 8085, then run:
+
+```sh
+npm test
+npm run test:browser
+```
+
+The browser suite uses a system Chromium at `/usr/bin/chromium` when available. Otherwise install a Playwright browser or specify `BROWSER_EXECUTABLE`. `BASE_URL` can select another test server. The suite checks pages at six widths, metadata, indexability, accessibility, navigation, demo download and privacy signals. It writes local review artifacts under `review/v2`.
+
+The HTTP smoke suite exercises the local Worker and its static asset routing. Review evidence distinguishes local validation from public HTTPS verification.
+
+## Deploy
+
+Set `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` securely, then:
+
+```sh
+npm run deploy
+```
+
+`wrangler.jsonc` configures the `rainc` Worker, its assets and the `rainc.web.id` custom domain. Only `/events` runs through the metrics Worker before asset handling. All public company pages remain static.
+
+`cloudflare-pages.zip` contains static assets only. It does not contain the metrics Worker, so it is not a complete V2 deployment on its own.
+
+## Metrics operations
+
+In the Cloudflare dashboard, open the `rainc` Worker and its Logs or Observability view. Filter console messages containing `rainc_site_metric`. Records contain an event, page, source placement, optional demo step and the release label `corporate-v2`.
+
+Tracked events are `page_view`, `product_open`, `demo_open`, `demo_step`, `example_download`, `contact_email` and `founder_profile`. These represent page views or user actions, not unique people, delivered emails, subscriptions or sales. The tracker uses no cookies, browser IDs, query strings, document content or email contents. Do Not Track and Global Privacy Control suppress tracking.
+
+Metrics use the existing Cloudflare Worker logging service. No additional paid analytics subscription or third party browser SDK is required. Provider plan quotas and log retention settings still apply. Privacy disclosures describe the distinction between event payloads and Cloudflare's technical request records.

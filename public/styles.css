@@ -2698,3 +2698,472 @@ h1 {
     font-size: 26px;
   }
 }
+/* Corporate pages extend the existing typography, palette and product panels. */
+nav {
+  gap: 24px;
+}
+nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--blue);
+}
+.hero .hero-actions {
+  flex-wrap: wrap;
+}
+.company-overview {
+  padding-block: 12px 32px;
+}
+.company-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 24px 0;
+  margin: 0;
+  border-block: 1px solid var(--line);
+  gap: 24px;
+}
+.company-facts div {
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+}
+.company-facts div:first-child {
+  border: 0;
+  padding: 0;
+}
+.company-facts dt {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.company-facts dd {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.home-product {
+  padding-top: 40px;
+}
+.development-status {
+  font-size: 12px;
+  color: #486a54;
+  background: #edf3ec;
+  border: 1px solid #d9e4d6;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.home-product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding: 32px 0 45px;
+  border-bottom: 1px solid var(--line);
+}
+.home-product-layout h3 {
+  font-size: 25px;
+  font-weight: 550;
+  letter-spacing: -0.8px;
+}
+.home-product-layout p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-top: 17px;
+}
+.product-summary {
+  background: #edf3fe;
+  border: 1px solid #dfe8fa;
+  border-radius: 8px;
+  padding: 30px;
+}
+.product-summary h3 {
+  font-size: 21px;
+}
+.product-summary p {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d7e2f5;
+  color: #566b8b;
+}
+.product-summary .quiet-link {
+  margin-top: 20px;
+}
+.page-intro {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+.page-intro h1 {
+  font-size: clamp(40px, 4.6vw, 65px);
+  margin: 21px 0 22px;
+  max-width: 950px;
+}
+.page-intro h1 em {
+  font-style: normal;
+  color: var(--blue);
+}
+.page-intro > p {
+  max-width: 750px;
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.product-details {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  padding-block: 15px 45px;
+  border-bottom: 1px solid var(--line);
+}
+.product-details h2 {
+  font-size: 28px;
+}
+.product-details p,
+.product-note p,
+.company-note p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-top: 18px;
+  max-width: 800px;
+}
+.product-details-list {
+  margin: 0;
+}
+.product-details-list div {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.product-details-list dt {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 7px;
+}
+.product-details-list dd {
+  margin: 0;
+  font-size: 15px;
+}
+.product-note,
+.company-note {
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+.product-note h2,
+.company-note h2 {
+  font-size: 27px;
+  letter-spacing: -0.8px;
+}
+.product-note .quiet-link,
+.company-note .quiet-link {
+  margin-top: 22px;
+}
+.founder-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 20px;
+}
+.founder-links .quiet-link {
+  color: var(--blue);
+}
+.updates-list {
+  padding-top: 8px;
+}
+.updates-list article {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 45px;
+  padding: 34px 0;
+  border-top: 1px solid var(--line);
+}
+.updates-list time {
+  font-size: 13px;
+  color: var(--muted);
+  padding-top: 9px;
+}
+.updates-list h2 {
+  font-size: 29px;
+  letter-spacing: -0.9px;
+}
+.updates-list p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-top: 16px;
+  max-width: 710px;
+}
+.updates-list .quiet-link {
+  margin-top: 20px;
+}
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 70px;
+  padding-block: 20px 48px;
+  border-bottom: 1px solid var(--line);
+}
+.contact-primary {
+  padding: 30px;
+  background: #edf3fe;
+  border: 1px solid #dfe8fa;
+  border-radius: 8px;
+}
+.contact-primary h2 {
+  font-size: clamp(19px, 2.2vw, 31px);
+  letter-spacing: -0.9px;
+  overflow-wrap: anywhere;
+  margin-top: 20px;
+}
+.contact-primary p,
+.contact-details p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-top: 18px;
+}
+.contact-primary .button {
+  margin-top: 24px;
+}
+.contact-details h3 {
+  font-size: 18px;
+  font-weight: 550;
+  margin-top: 28px;
+}
+.contact-details h3:first-child {
+  margin-top: 0;
+}
+.contact-details .quiet-link {
+  margin-top: 15px;
+}
+.legal-content {
+  max-width: 900px;
+  padding-bottom: 65px;
+}
+.policy-date {
+  font-size: 12px;
+  color: var(--muted);
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.legal-content section {
+  margin-top: 32px;
+}
+.legal-content h2 {
+  font-size: 25px;
+  letter-spacing: -0.7px;
+}
+.legal-content p {
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--muted);
+  margin-top: 15px;
+}
+.legal-content a,
+.company-note p a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+.legal-content section > a {
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 15px;
+}
+.footer-links {
+  flex-wrap: wrap;
+}
+.footer-bottom a:hover {
+  color: white;
+}
+@media (max-width: 1100px) {
+  nav {
+    gap: 20px;
+  }
+  .header-actions .button.compact {
+    font-size: 11px;
+    padding: 11px 14px;
+  }
+  .home-product-layout,
+  .product-details,
+  .contact-layout {
+    gap: 40px;
+  }
+}
+@media (max-width: 850px) {
+  nav {
+    gap: 15px;
+  }
+  nav a {
+    font-size: 12px;
+  }
+  .company-facts {
+    gap: 16px;
+  }
+  .company-facts div {
+    padding-left: 16px;
+  }
+  .company-facts dd {
+    font-size: 13px;
+  }
+  .home-product-layout {
+    gap: 32px;
+  }
+  .contact-layout {
+    gap: 30px;
+  }
+  .updates-list article {
+    grid-template-columns: 160px 1fr;
+    gap: 25px;
+  }
+  .footer-top > div {
+    gap: 18px;
+  }
+}
+@media (max-width: 620px) {
+  nav {
+    gap: 0;
+  }
+  nav a[aria-current="page"] {
+    background: #f0f4ff;
+  }
+  .company-overview {
+    padding-block: 0 18px;
+  }
+  .company-facts {
+    grid-template-columns: 1fr 1fr;
+    gap: 23px;
+    padding: 21px 0;
+  }
+  .company-facts div {
+    padding: 0;
+    border: 0;
+  }
+  .company-facts dt {
+    font-size: 10px;
+  }
+  .company-facts dd {
+    font-size: 13px;
+  }
+  .home-product {
+    padding-top: 31px;
+  }
+  .home-product .section-intro {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .development-status {
+    font-size: 10px;
+    padding: 7px 8px;
+  }
+  .home-product-layout,
+  .product-details,
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .home-product-layout {
+    padding-top: 4px;
+  }
+  .home-product-layout h3 {
+    font-size: 23px;
+  }
+  .home-product-layout p {
+    font-size: 14px;
+  }
+  .product-summary {
+    padding: 24px;
+  }
+  .product-summary h3 {
+    font-size: 21px;
+  }
+  .page-intro {
+    padding-top: 37px;
+    padding-bottom: 28px;
+  }
+  .page-intro h1 {
+    font-size: clamp(35px, 9.5vw, 49px);
+    letter-spacing: -1.5px;
+  }
+  .page-intro > p {
+    font-size: 15px;
+  }
+  .product-details {
+    padding-top: 4px;
+    padding-bottom: 28px;
+  }
+  .product-details h2 {
+    font-size: 25px;
+  }
+  .product-details p,
+  .company-note p,
+  .product-note p {
+    font-size: 14px;
+  }
+  .product-details-list div {
+    padding: 14px 0;
+  }
+  .product-note,
+  .company-note {
+    padding-top: 30px;
+    padding-bottom: 42px;
+  }
+  .product-note h2,
+  .company-note h2 {
+    font-size: 23px;
+  }
+  .founder-links {
+    gap: 18px;
+  }
+  .updates-list article {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 25px 0;
+  }
+  .updates-list time {
+    font-size: 12px;
+  }
+  .updates-list h2 {
+    font-size: 25px;
+  }
+  .updates-list p {
+    font-size: 14px;
+  }
+  .contact-layout {
+    padding-top: 3px;
+    padding-bottom: 30px;
+  }
+  .contact-primary {
+    padding: 23px;
+  }
+  .contact-primary h2 {
+    font-size: 23px;
+  }
+  .contact-primary p,
+  .contact-details p {
+    font-size: 14px;
+  }
+  .legal-content section {
+    margin-top: 27px;
+  }
+  .legal-content h2 {
+    font-size: 22px;
+  }
+  .legal-content p {
+    font-size: 14px;
+  }
+  .legal-content {
+    padding-bottom: 42px;
+  }
+  .footer-top > div {
+    width: 100%;
+    margin: 0;
+    gap: 22px;
+  }
+  .footer-bottom {
+    gap: 15px;
+  }
+  .footer-bottom a {
+    font-size: 9px;
+  }
+}
+.legal-page .page-intro,
+.legal-page .legal-content {
+  max-width: 800px;
+}

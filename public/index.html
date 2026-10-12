@@ -3,30 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAinc Independent AI Product Studio</title>
     <meta
       name="description"
-      content="RAinc is Rizal Aditya's independent AI product studio. Meet Precidoc, a workspace for reviewing and preparing documents for RAG."
+      content="RAinc is an independent AI Product Studio founded in early 2026 by Rizal Aditya. Based in Indonesia, bootstrapped and developing Precidoc."
     />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#fafbf9" />
-    <meta property="og:title" content="RAinc AI Product Studio" />
+    <link rel="canonical" href="https://rainc.web.id/" />
+    <meta property="og:title" content="RAinc Independent AI Product Studio" />
     <meta
       property="og:description"
-      content="An independent AI product studio. Makers of Precidoc."
+      content="RAinc is an independent AI Product Studio founded in early 2026 by Rizal Aditya. Based in Indonesia, bootstrapped and developing Precidoc."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rainc.web.id/" />
+    <meta property="og:site_name" content="RAinc" />
     <meta
       property="og:image"
       content="https://rainc.web.id/social-preview.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="RAinc is an independent AI product studio and the maker of Precidoc."
-    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:url" content="https://rainc.web.id/" />
-    <link rel="canonical" href="https://rainc.web.id/" />
+    <meta name="twitter:title" content="RAinc Independent AI Product Studio" />
+    <meta
+      name="twitter:description"
+      content="RAinc is an independent AI Product Studio founded in early 2026 by Rizal Aditya. Based in Indonesia, bootstrapped and developing Precidoc."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rainc.web.id/social-preview.png"
+    />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link
       rel="preload"
@@ -44,23 +52,45 @@
     />
     <link rel="stylesheet" href="/styles.css" />
     <noscript><link rel="stylesheet" href="/no-script.css" /></noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RAinc",
+        "url": "https://rainc.web.id/",
+        "description": "An independent AI Product Studio founded in early 2026, bootstrapped and based in Indonesia.",
+        "email": "founder@rainc.web.id",
+        "address": { "@type": "PostalAddress", "addressCountry": "ID" },
+        "founder": {
+          "@type": "Person",
+          "name": "Rizal Aditya",
+          "jobTitle": "Founder and AI engineer",
+          "sameAs": ["https://www.linkedin.com/in/rzladitya/"]
+        }
+      }
+    </script>
+    <script src="/analytics.js" defer></script>
     <script src="/app.js" defer></script>
-    <title>RAinc AI Product Studio</title>
   </head>
-  <body>
+  <body class="">
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="wrap header-inner">
-        <a class="wordmark" href="#main" aria-label="RAinc home"
+        <a class="wordmark" href="/" aria-label="RAinc home"
           >RA<span>inc</span></a
         >
         <nav id="navigation" aria-label="Main navigation">
-          <a href="#product">Precidoc</a><a href="#studio">About RAinc</a
-          ><a href="#founder">Founder</a>
+          <a href="/" aria-current="page">Home</a
+          ><a href="/products/">Products</a><a href="/about/">About</a
+          ><a href="/updates/">Updates</a><a href="/contact/">Contact</a>
         </nav>
         <div class="header-actions">
-          <a class="button compact" href="https://precidoc.rainc.web.id/"
-            >Open Precidoc </a
+          <a
+            class="button compact"
+            href="https://precidoc.rainc.web.id/"
+            data-event="product_open"
+            data-source="header"
+            >Open Precidoc</a
           ><button
             class="menu-toggle"
             type="button"
@@ -76,18 +106,18 @@
     <main id="main">
       <section class="hero wrap" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <div class="eyebrow">Independent AI product studio</div>
+          <span class="eyebrow">Independent AI Product Studio</span>
           <h1 id="hero-title">
-            Tools for preparing<br /><em>documents for AI.</em>
+            Building useful<br />software for<br /><em>the AI era.</em>
           </h1>
           <p>
-            RAinc builds software for AI workflows. Our first product, Precidoc,
-            helps you review documents and prepare their content for RAG.
+            RAinc develops AI powered SaaS products. Founded by Rizal Aditya in
+            early 2026, we are starting with Precidoc, a workspace for preparing
+            documents for AI.
           </p>
           <div class="hero-actions">
-            <a class="button" href="https://precidoc.rainc.web.id/"
-              >Open Precidoc </a
-            ><a class="quiet-link" href="#product">See an example </a>
+            <a class="button" href="/products/">Explore our products</a
+            ><a class="quiet-link" href="/about/">About RAinc</a>
           </div>
         </div>
         <div
@@ -130,298 +160,127 @@
           <div class="art-caption">Source references stay with the output.</div>
         </div>
       </section>
-      <section
-        id="product"
-        class="product-section wrap"
-        aria-labelledby="product-title"
-      >
+      <section class="wrap company-overview" aria-label="Company overview">
+        <dl class="company-facts">
+          <div>
+            <dt>Founded</dt>
+            <dd>Early 2026</dd>
+          </div>
+          <div>
+            <dt>Based in</dt>
+            <dd>Indonesia</dd>
+          </div>
+          <div>
+            <dt>Funding</dt>
+            <dd>Bootstrapped</dd>
+          </div>
+          <div>
+            <dt>Led by</dt>
+            <dd>Rizal Aditya</dd>
+          </div>
+        </dl>
+      </section>
+      <section class="wrap home-product" aria-labelledby="first-product">
         <div class="section-intro">
           <div>
-            <span class="eyebrow">Our first product</span>
-            <h2 id="product-title">
-              Review the document<br />before you use it.
-            </h2>
+            <span class="eyebrow">Our first SaaS product</span>
+            <h2 id="first-product">Precidoc</h2>
           </div>
-          <p>
-            Compare the text with its source. Check the chunks. Export the
-            result.
-          </p>
+          <span class="development-status">In active development</span>
         </div>
-        <div class="product-feature">
-          <div class="product-feature-top">
-            <div class="product-brand">
-              <div>
-                <strong>Precidoc</strong><span>A product by RAinc</span>
-              </div>
-            </div>
-            <span class="product-category">Document preparation for RAG</span>
-          </div>
-          <div class="product-feature-body">
-            <div class="product-description">
-              <h3>Prepare your<br />RAG documents.</h3>
-              <p>
-                Review extracted text alongside its source. Adjust how it’s
-                split, then take the result into your RAG workflow.
-              </p>
-              <ul>
-                <li>Compare text with the original</li>
-                <li>Inspect and refine chunks</li>
-                <li>Export JSON or Markdown</li>
-              </ul>
-              <a class="button white" href="https://precidoc.rainc.web.id/"
-                >Open Precidoc
-              </a>
-              <div class="product-assurance">
-                Processed in your browser.<br />No API key required.
-              </div>
-            </div>
-            <div class="example-workspace">
-              <div class="workspace-header">
-                <span> recovery-guide.md</span
-                ><span class="example-label">Example document</span>
-              </div>
-              <div
-                class="demo-tabs"
-                role="tablist"
-                aria-label="Explore the document workflow"
-              >
-                <button
-                  id="tab-review"
-                  role="tab"
-                  aria-controls="panel-review"
-                  aria-selected="true"
-                  type="button"
-                >
-                  Review</button
-                ><button
-                  id="tab-chunks"
-                  role="tab"
-                  aria-controls="panel-chunks"
-                  aria-selected="false"
-                  tabindex="-1"
-                  type="button"
-                >
-                  Chunks</button
-                ><button
-                  id="tab-export"
-                  role="tab"
-                  aria-controls="panel-export"
-                  aria-selected="false"
-                  tabindex="-1"
-                  type="button"
-                >
-                  Export
-                </button>
-              </div>
-              <div
-                id="panel-review"
-                class="demo-panel"
-                tabindex="0"
-                role="tabpanel"
-                aria-labelledby="tab-review"
-              >
-                <div class="comparison">
-                  <div>
-                    <div class="pane-label">Original document</div>
-                    <span class="section-ref">section_03</span>
-                    <h4>Recovery procedure</h4>
-                    <ol>
-                      <li>Check replication status.</li>
-                      <li>Verify available disk space.</li>
-                      <li>Restore using the approved playbook.</li>
-                    </ol>
-                    <div class="mini-table">
-                      <span>Parameter</span><span>Limit</span
-                      ><b>Replication lag</b><b>30 seconds</b
-                      ><b>Free disk space</b><b>20%</b>
-                    </div>
-                  </div>
-                  <div class="extracted-pane">
-                    <div class="pane-label">Extracted text</div>
-                    <span class="section-ref">source: section_03</span>
-                    <pre>
-## Recovery procedure
-
-1. Check replication status.
-2. Verify available disk space.
-3. Restore using the approved
-   playbook.
-
-Replication lag: 30 seconds
-Free disk space: 20%</pre>
-                    <div class="source-connected">
-                      Source reference included
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="panel-chunks"
-                class="demo-panel"
-                tabindex="0"
-                role="tabpanel"
-                aria-labelledby="tab-chunks"
-                hidden
-              >
-                <div class="chunks-heading">
-                  <strong>3 chunks</strong
-                  ><span>Each keeps its source reference.</span>
-                </div>
-                <div class="demo-chunk">
-                  <span>01</span>
-                  <div>
-                    <strong>Recovery guide</strong>
-                    <p>Steps for restoring the database safely.</p>
-                    <small>source: section_01</small>
-                  </div>
-                </div>
-                <div class="demo-chunk">
-                  <span>02</span>
-                  <div>
-                    <strong>Prerequisites</strong>
-                    <p>Confirm access and a recent backup.</p>
-                    <small>source: section_02</small>
-                  </div>
-                </div>
-                <div class="demo-chunk selected">
-                  <span>03</span>
-                  <div>
-                    <strong>Recovery procedure</strong>
-                    <p>
-                      Check replication status. Verify available disk space.
-                      Restore using the approved playbook.
-                    </p>
-                    <small>source: section_03</small>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="panel-export"
-                class="demo-panel export-panel"
-                tabindex="0"
-                role="tabpanel"
-                aria-labelledby="tab-export"
-                hidden
-              >
-                <div class="export-heading">
-                  <strong>Structured output</strong><span>JSON</span>
-                </div>
-                <pre><span class="syntax-dim">{</span>
-  <span class="syntax-key">"document"</span>: "recovery-guide.md",
-  <span class="syntax-key">"chunks"</span>: [
-    {
-      <span class="syntax-key">"id"</span>: "chunk_03",
-      <span class="syntax-key">"source"</span>: "section_03",
-      <span class="syntax-key">"title"</span>: "Recovery procedure",
-      <span class="syntax-key">"text"</span>: "Check replication status."
-    }
-  ]
-<span class="syntax-dim">}</span></pre>
-                <button type="button" class="download-example">
-                  Download example JSON</button
-                ><span class="export-note"
-                  >Abbreviated preview. Download includes all three
-                  chunks.</span
-                >
-              </div>
-              <div class="workspace-footer">
-                An illustrated example of the workflow
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="formats-row">
-          <span>Supported document formats</span>
+        <div class="home-product-layout">
           <div>
-            <span>Digital PDF</span><span>DOCX</span><span>TXT</span
-            ><span>Markdown</span>
+            <h3>Prepare documents for RAG.</h3>
+            <p>
+              Precidoc brings extracted text, source comparison, chunk review
+              and structured exports into a document preparation workspace.
+            </p>
+            <p>
+              Its current public interface supports digital PDF, DOCX, TXT and
+              Markdown, with JSON or Markdown output. Feature availability can
+              change during development.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button"
+                href="https://precidoc.rainc.web.id/"
+                data-event="product_open"
+                data-source="home"
+                >Open Precidoc</a
+              ><a
+                class="quiet-link"
+                href="/products/#demo"
+                data-event="demo_open"
+                data-source="home"
+                >See an example</a
+              >
+            </div>
+          </div>
+          <div class="product-summary">
+            <h3>From source to export</h3>
+            <p>Compare the extracted text with the document.</p>
+            <p>Review how the content has been split.</p>
+            <p>Export structured content for your pipeline.</p>
+            <a class="quiet-link" href="/products/">Product details</a>
           </div>
         </div>
       </section>
-      <section
-        id="studio"
-        class="studio-section wrap"
-        aria-labelledby="studio-title"
-      >
+      <section class="studio-section wrap">
         <div class="studio-copy">
-          <span class="eyebrow">About RAinc</span>
-          <h2 id="studio-title">We build and own<br />our products.</h2>
+          <span class="eyebrow">The studio</span>
+          <h2>Independent.<br />Led by its founder.</h2>
           <p>
-            RAinc is an independent product studio founded by Rizal Aditya. We
-            develop software from problems encountered while working on AI
-            systems.
+            RAinc is an Indonesia based, bootstrapped startup building and
+            owning its software. Our focus is practical AI workflows, starting
+            with document preparation.
           </p>
-          <p>
-            Precidoc is our first product. It focuses on the preparation work
-            that comes before documents enter a RAG pipeline.
-          </p>
+          <a class="quiet-link" href="/about/">Meet the studio and founder</a>
         </div>
         <div class="studio-story">
-          <h3>Why document preparation?</h3>
+          <h3>Why start with documents?</h3>
           <p>
-            Choosing a chunking strategy is only part of the task. You also need
-            to check the extracted text, inspect the chunks, and know where each
-            one came from.
+            Preparing documents for a retrieval pipeline takes more than
+            choosing a chunk size. You need to inspect the text, keep its source
+            references and check the result.
           </p>
-          <p>
-            Precidoc puts those steps in one workspace, with an export you can
-            take into your own pipeline.
-          </p>
-          <a class="quiet-link" href="#product">Explore the example</a>
-        </div>
-      </section>
-      <section
-        id="founder"
-        class="founder-section wrap"
-        aria-labelledby="founder-title"
-      >
-        <div class="founder-identity">
-          <div>
-            <span class="eyebrow">Founder</span>
-            <h2 id="founder-title">Rizal Aditya</h2>
-            <span class="founder-role">Founder and AI engineer</span>
-          </div>
-        </div>
-        <div class="founder-story">
-          <p>
-            Rizal is an AI engineer and the founder of RAinc. He develops
-            Precidoc, starting from his own experience choosing chunking
-            strategies for RAG.
-          </p>
-          <a class="quiet-link" href="https://www.linkedin.com/in/rzladitya/"
-            >View Rizal’s LinkedIn
-          </a>
+          <p>That is the problem behind Precidoc.</p>
         </div>
       </section>
       <section class="closing-section wrap">
         <div>
-          <span class="eyebrow">Precidoc</span>
-          <h2>Try your own document.</h2>
+          <span class="eyebrow">Business contact</span>
+          <h2>Talk to the founder.</h2>
           <p>
-            Visit Precidoc to review a document, adjust its chunks, and export
-            the result.
+            For product questions, feedback or business inquiries, contact Rizal
+            Aditya.
           </p>
         </div>
-        <a class="button" href="https://precidoc.rainc.web.id/"
-          >Open Precidoc
-        </a>
+        <a class="button" href="/contact/">Contact RAinc</a>
       </section>
     </main>
     <footer class="site-footer">
       <div class="wrap">
         <div class="footer-top">
-          <a class="wordmark" href="#main" aria-label="RAinc home"
+          <a class="wordmark" href="/" aria-label="RAinc home"
             >RA<span>inc</span></a
           >
-          <p>An independent AI product studio.<br />Founded by Rizal Aditya.</p>
-          <div>
-            <a href="https://precidoc.rainc.web.id/">Precidoc </a
-            ><a href="https://www.linkedin.com/in/rzladitya/">LinkedIn </a>
+          <p>
+            An independent AI Product Studio.<br />Founded in early 2026. Based
+            in Indonesia.
+          </p>
+          <div class="footer-links">
+            <a href="/contact/">Contact</a><a href="/privacy/">Privacy Policy</a
+            ><a href="/terms/">Terms</a>
           </div>
         </div>
         <div class="footer-bottom">
           <span><span id="year">2026</span> RAinc</span
-          ><span>From source to context.</span>
+          ><a
+            href="mailto:founder@rainc.web.id"
+            data-event="contact_email"
+            data-source="footer"
+            >founder@rainc.web.id</a
+          >
         </div>
       </div>
     </footer>
